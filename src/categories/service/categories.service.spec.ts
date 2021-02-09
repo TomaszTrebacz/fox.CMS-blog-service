@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { CategoryEntity } from '../database/entities/category.entity';
+import { CategoryEntity } from '../../database/entities/category.entity';
 import { Connection, DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { CategoriesService } from './categories.service';
-import { CategoriesResolver } from './categories.resolver';
+import { CategoriesResolver } from '../categories.resolver';
 import { CategoryI } from 'src/models/category.interface';
 import { categoryExist } from 'src/validators';
 

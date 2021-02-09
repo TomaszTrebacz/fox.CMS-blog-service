@@ -1,5 +1,5 @@
 import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
-import { CategoriesService } from './categories.service';
+import { CategoriesService } from './service/categories.service';
 import { Auth, userRole } from '@tomasztrebacz/nest-auth-graphql-redis';
 import { CategoryI } from '../models/category.interface';
 import { CreateCategoryDto, EditCategoryDto } from './dto';

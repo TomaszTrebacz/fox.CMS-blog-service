@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CategoryEntity } from '../database/entities/category.entity';
-import { CategoryI } from '../models/category.interface';
-import { isExecuted, isArrayFound, isFound } from '../utils';
+import { CategoryEntity } from '../../database/entities/category.entity';
+import { CategoryI } from '../../models/category.interface';
+import { isExecuted, isArrayFound, isFound } from '../../utils';
 
 @Injectable()
 export class CategoriesService {
