@@ -5,7 +5,7 @@ import {
   registerDecorator,
   ValidationOptions,
 } from 'class-validator';
-import { PostsService } from '../posts/posts.service';
+import { PostsService } from '../posts/service/posts.service';
 
 @ValidatorConstraint({ name: 'postExist', async: true })
 @Injectable()

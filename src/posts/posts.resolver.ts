@@ -12,7 +12,7 @@ import {
   userRole,
 } from '@tomasztrebacz/nest-auth-graphql-redis';
 import { User } from '../graphql';
-import { PostsService } from './posts.service';
+import { PostsService } from './service/posts.service';
 import { PostI } from '../models/post.interface';
 import { ChangeCategoryPostDto, CreatePostDto, EditPostDto } from './dto';
 

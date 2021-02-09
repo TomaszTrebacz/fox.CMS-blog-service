@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { PostEntity } from '../database/entities/post.entity';
-import { PostI } from '../models/post.interface';
-import { isExecuted, isArrayFound, isFound } from '../utils';
+import { PostEntity } from '../../database/entities/post.entity';
+import { PostI } from '../../models/post.interface';
+import { isExecuted, isArrayFound, isFound } from '../../utils';
 
 @Injectable()
 export class PostsService {
