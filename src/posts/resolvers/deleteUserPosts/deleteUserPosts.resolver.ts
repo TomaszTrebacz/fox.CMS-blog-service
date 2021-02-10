@@ -1,12 +1,12 @@
 import { Resolver, Mutation, Args } from '@nestjs/graphql';
-import { AccessLevel } from '@tomasztrebacz/nest-auth-graphql-redis';
+import { Auth, userRole } from '@tomasztrebacz/nest-auth-graphql-redis';
 import { PostsService } from '../../../posts/service/posts.service';
 
 @Resolver('deleteUserPosts')
 export class deleteUserPostResolver {
   constructor(private readonly postsService: PostsService) {}
 
-  @AccessLevel()
+  @Auth(userRole.ROOT)
   @Mutation('deleteUserPosts')
   async deleteUserPosts(@Args('id') id: string): Promise<boolean> {
     try {

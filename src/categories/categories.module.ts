@@ -1,14 +1,24 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CategoriesService } from './service/categories.service';
-import { CategoriesResolver } from './categories.resolver';
 import { CategoryEntity } from '../database/entities/category.entity';
 import { categoryExist, categoryUnique } from '../validators';
+import {
+  CreateCategoryResolver,
+  DeleteCategoryResolver,
+  EditCategoryResolver,
+  FindAllResolver,
+  FindOneResolver,
+} from './resolvers';
 
 @Module({
   imports: [TypeOrmModule.forFeature([CategoryEntity])],
   providers: [
-    CategoriesResolver,
+    CreateCategoryResolver,
+    DeleteCategoryResolver,
+    EditCategoryResolver,
+    FindAllResolver,
+    FindOneResolver,
     CategoriesService,
     categoryExist,
     categoryUnique,
