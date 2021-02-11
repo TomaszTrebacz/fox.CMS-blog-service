@@ -7,7 +7,7 @@ import {
   CreateCategoryResolver,
   DeleteCategoryResolver,
   EditCategoryResolver,
-  FindAllResolver,
+  FindAllCategoriesResolver,
   FindOneResolver,
 } from './resolvers';
 
@@ -17,7 +17,7 @@ import {
     CreateCategoryResolver,
     DeleteCategoryResolver,
     EditCategoryResolver,
-    FindAllResolver,
+    FindAllCategoriesResolver,
     FindOneResolver,
     CategoriesService,
     categoryExist,

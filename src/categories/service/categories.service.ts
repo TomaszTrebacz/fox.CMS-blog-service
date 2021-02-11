@@ -13,9 +13,7 @@ export class CategoriesService {
   ) {}
 
   async findAll(): Promise<CategoryI[]> {
-    const res = await this.categoriesRepository.find({ relations: ['posts'] });
-
-    await isArrayFound(res);
+    const res = await this.categoriesRepository.find();
 
     return res;
   }
@@ -32,8 +30,6 @@ export class CategoriesService {
 
   async findOneByName(name: string): Promise<CategoryI> {
     const category = await this.categoriesRepository.findOne({ name: name });
-
-    await isFound(category, `Can not find category with name: ${name}`);
 
     return category;
   }

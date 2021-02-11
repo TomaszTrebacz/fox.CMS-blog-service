@@ -6,3 +6,4 @@ export * from './deleteUserPosts/deleteUserPosts.resolver';
 export * from './deletePost/deletePost.resolver';
 export * from './createPost/createPost.resolver';
 export * from './changeCategoryPost/changeCategoryPost.resolver';
+export * from './resolveField/resolveField.resolver';

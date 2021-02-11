@@ -3,7 +3,6 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { CategoryEntity } from '../../database/entities/category.entity';
 import { Connection, DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { CategoriesService } from './categories.service';
-import { CategoriesResolver } from '../categories.resolver';
 import { CategoryI } from 'src/models/category.interface';
 import { categoryExist } from 'src/validators';
 
@@ -118,17 +117,12 @@ describe('CategoriesService', () => {
       });
     });
     describe('otherwise', () => {
-      it('should return an error', async () => {
-        const name = 'categoryName';
+      it('should return an undefined', async () => {
         categoryRepository.findOne.mockResolvedValue(undefined);
 
-        try {
-          await categoriesService.findOneByName(name);
-        } catch (err) {
-          expect(err.message).toEqual(
-            `Can not find category with name: ${name}`,
-          );
-        }
+        const cat = await categoriesService.findOneByName('name');
+
+        expect(cat).toEqual(undefined);
       });
     });
   });

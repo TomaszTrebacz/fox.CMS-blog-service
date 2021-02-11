@@ -1,4 +1,4 @@
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 import { CategoriesService } from 'src/categories/service/categories.service';
 import { CategoryI } from 'src/models/category.interface';
 
@@ -6,8 +6,8 @@ import { CategoryI } from 'src/models/category.interface';
 export class FindOneResolver {
   constructor(private readonly categoriesService: CategoriesService) {}
 
-  @Query('findOne')
-  async findOne(): Promise<CategoryI[]> {
-    return await this.categoriesService.findAll();
+  @Query('category')
+  async findOne(@Args('id') id: number): Promise<CategoryI> {
+    return await this.categoriesService.findOneById(id);
   }
 }

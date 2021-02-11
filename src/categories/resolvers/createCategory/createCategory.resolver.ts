@@ -9,7 +9,6 @@ export class CreateCategoryResolver {
   constructor(private readonly categoriesService: CategoriesService) {}
 
   @Mutation('createCategory')
-  @Auth(userRole.ADMIN, userRole.ROOT)
   async createCategory(
     @Args('createCategoryInput') createData: CreateCategoryDto,
   ): Promise<CategoryI> {

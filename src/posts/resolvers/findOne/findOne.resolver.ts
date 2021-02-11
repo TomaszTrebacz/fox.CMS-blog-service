@@ -10,9 +10,4 @@ export class FindOneResolver {
   async findOne(@Args('id') id: number): Promise<PostI> {
     return await this.postsService.findOne(id);
   }
-
-  @ResolveField('user')
-  getUser(@Parent() post: PostI) {
-    return { __typename: 'User', id: post.userId };
-  }
 }

@@ -12,11 +12,13 @@ import {
   FindAllResolver,
   FindOneResolver,
   FindUserPostsResolver,
+  PostsResolver,
 } from './resolvers';
 
 @Module({
   imports: [TypeOrmModule.forFeature([PostEntity])],
   providers: [
+    PostsResolver,
     FindOneResolver,
     FindAllResolver,
     FindUserPostsResolver,
