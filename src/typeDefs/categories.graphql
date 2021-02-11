@@ -1,0 +1,27 @@
+scalar Date
+
+type Category {
+  id: Int!
+  name: String!
+  posts: [Post]
+}
+
+extend type Query {
+  categories: [Category]
+  category(id: Int): Category
+}
+
+extend type Mutation {
+  createCategory(createCategoryInput: CreateCategoryInput): Category
+  editCategory(editCategoryInput: EditCategoryInput): Boolean
+  deleteCategory(id: Int!): Boolean
+}
+
+input CreateCategoryInput {
+  name: String!
+}
+
+input EditCategoryInput {
+  id: Int!
+  name: String!
+}
