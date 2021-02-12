@@ -1,1 +1,1 @@
-export * from './database.util';
+export * from './database/database.util';

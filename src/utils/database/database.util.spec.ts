@@ -1,4 +1,4 @@
-import { PostI } from '../models/post.interface';
+import { PostI } from '../../models/post.interface';
 import { UpdateResult } from 'typeorm';
 import { isArrayFound, isExecuted, isFound } from './database.util';
 
