@@ -1,6 +1,6 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
-import { CategoriesService } from 'src/categories/service/categories.service';
-import { CategoryI } from 'src/models/category.interface';
+import { CategoriesService } from '../../../categories/service/categories.service';
+import { CategoryI } from '../../../models/category.interface';
 
 @Resolver('findOne')
 export class FindOneResolver {
