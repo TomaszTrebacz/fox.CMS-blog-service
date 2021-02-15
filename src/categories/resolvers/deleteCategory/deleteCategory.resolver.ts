@@ -1,6 +1,6 @@
 import { Resolver, Mutation, Args } from '@nestjs/graphql';
 import { Auth, userRole } from '@tomasztrebacz/nest-auth-graphql-redis';
-import { CategoriesService } from 'src/categories/service/categories.service';
+import { CategoriesService } from '../../../categories/service/categories.service';
 
 @Resolver('deleteCategory')
 export class DeleteCategoryResolver {
