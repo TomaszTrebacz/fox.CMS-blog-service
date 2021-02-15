@@ -1,7 +1,7 @@
 import { Resolver, Mutation, Args } from '@nestjs/graphql';
 import { Auth, userRole } from '@tomasztrebacz/nest-auth-graphql-redis';
-import { ChangeCategoryPostDto } from 'src/posts/dto';
-import { PostsService } from 'src/posts/service/posts.service';
+import { ChangeCategoryPostDto } from '../../../posts/dto';
+import { PostsService } from '../../../posts/service/posts.service';
 
 @Resolver('changeCategoryPost')
 export class ChangeCategoryPostResolver {
