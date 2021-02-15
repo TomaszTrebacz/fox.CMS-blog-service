@@ -1,6 +1,6 @@
 import { Resolver, Query } from '@nestjs/graphql';
-import { CategoriesService } from 'src/categories/service/categories.service';
-import { CategoryI } from 'src/models/category.interface';
+import { CategoriesService } from '../../../categories/service/categories.service';
+import { CategoryI } from '../../../models/category.interface';
 
 @Resolver('findAllCategories')
 export class FindAllCategoriesResolver {
