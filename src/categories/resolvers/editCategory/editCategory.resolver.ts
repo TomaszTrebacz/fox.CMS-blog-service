@@ -1,7 +1,7 @@
 import { Resolver, Mutation, Args } from '@nestjs/graphql';
 import { Auth, userRole } from '@tomasztrebacz/nest-auth-graphql-redis';
-import { EditCategoryDto } from 'src/categories/dto';
-import { CategoriesService } from 'src/categories/service/categories.service';
+import { EditCategoryDto } from '../../../categories/dto';
+import { CategoriesService } from '../../../categories/service/categories.service';
 
 @Resolver('editCategory')
 export class EditCategoryResolver {
