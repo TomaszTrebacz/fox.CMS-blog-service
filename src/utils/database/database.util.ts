@@ -1,13 +1,13 @@
 import { DeleteResult, UpdateResult } from 'typeorm';
-import { CategoryI } from '../models/category.interface';
-import { PostI } from '../models/post.interface';
+import { CategoryI } from '../../models/category.interface';
+import { PostI } from '../../models/post.interface';
 
 /* 
     typeorm does not throw error
     if query does not actually update or delete row from entity
 */
 export const isExecuted = (res: UpdateResult | DeleteResult): void => {
-  if (res.affected !== 1) {
+  if (res.affected === 0) {
     throw new Error(`Database/ORM error.`);
   }
 };
