@@ -1,5 +1,5 @@
 import { Parent, ResolveField, Resolver } from '@nestjs/graphql';
-import { PostI } from 'src/models/post.interface';
+import { PostI } from '../../../models/post.interface';
 
 @Resolver('Post')
 export class PostsResolver {
