@@ -10,6 +10,6 @@ export class EditPostDto extends EditPostInput {
   @MaxLength(50)
   title: string;
 
-  @MinLength(10)
+  @MinLength(50)
   text: string;
 }

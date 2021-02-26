@@ -7,7 +7,7 @@ export class CreatePostDto extends CreatePostInput {
   @MaxLength(50)
   title: string;
 
-  @MinLength(10)
+  @MinLength(50)
   text: string;
 
   @CategoryExist()

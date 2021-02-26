@@ -1,8 +1,8 @@
-import { CategoryExist } from '../../validators';
+import { CategoryExist, PostExist } from '../../validators';
 import { ChangeCategoryPostInput } from '../../graphql';
 
 export class ChangeCategoryPostDto extends ChangeCategoryPostInput {
-  @CategoryExist()
+  @PostExist()
   id: number;
 
   @CategoryExist()
