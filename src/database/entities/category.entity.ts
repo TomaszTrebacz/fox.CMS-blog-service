@@ -12,7 +12,6 @@ export const CategoryEntity = new EntitySchema<CategoryI>({
     name: {
       type: String,
       length: 50,
-      unique: true,
       nullable: false,
     },
   },
@@ -28,6 +27,12 @@ export const CategoryEntity = new EntitySchema<CategoryI>({
       name: 'IDX_CATEGORY',
       unique: true,
       columns: ['id'],
+    },
+  ],
+  uniques: [
+    {
+      name: 'UNIQUE_CATEGORY',
+      columns: ['name'],
     },
   ],
 });

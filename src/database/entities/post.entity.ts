@@ -12,7 +12,6 @@ export const PostEntity = new EntitySchema<PostI>({
     title: {
       type: String,
       length: 50,
-      unique: true,
       nullable: false,
     },
     text: {
@@ -50,6 +49,12 @@ export const PostEntity = new EntitySchema<PostI>({
       name: 'IDX_POST',
       unique: true,
       columns: ['id', 'userId'],
+    },
+  ],
+  uniques: [
+    {
+      name: 'UNIQUE_POST',
+      columns: ['title'],
     },
   ],
 });
