@@ -9,7 +9,13 @@ export default class SQLSeed implements Seeder {
       .createQueryBuilder()
       .insert()
       .into(CategoryEntity)
-      .values([{ name: 'Travel' }, { name: 'Productivity' }, { name: 'Food' }])
+      .values([
+        { name: 'Travel' },
+        { name: 'Productivity' },
+        { name: 'Food' },
+        { name: 'HR' },
+        { name: 'anotherName' },
+      ])
       .execute();
 
     await connection
@@ -19,7 +25,7 @@ export default class SQLSeed implements Seeder {
       .values([
         {
           title: `Oh right. I forgot about the battle.`,
-          text: `Fry! Stay back! He's too powerful! Hey! I'm a porno-dealing monster, what do I care what you think? In your time, yes, but nowadays shut up! 
+          text: `<b>Fry!</b> Stay back! He's too powerful! Hey! I'm a monster, what do I care what you think? In your time, yes, but nowadays shut up! 
           Besides, these are adult stemcells, harvested from perfectly healthy adults whom I killed for their stemcells.
           For the last time, I don't like lilacs! Your 'first' wife was the one who liked lilacs!`,
           imageUrl: 'https://i.ibb.co/YP4JvNB/Created-with-GIMP.jpg',
@@ -68,7 +74,7 @@ export default class SQLSeed implements Seeder {
           Don't trust them. I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
           All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it?`,
           imageUrl: 'https://i.ibb.co/pwZsCWx/stock2.jpg',
-          userId: '8055d923-0cfd-40e9-879e-638e8ffc7475',
+          userId: '2bac1170-827d-49ad-b7a3-9c76e6ad83e9',
           category: res.raw[0].id,
         },
         {
@@ -79,6 +85,15 @@ export default class SQLSeed implements Seeder {
           imageUrl: 'https://i.ibb.co/znMvxYw/stock3.jpg',
           userId: 'ded8dc2f-ab3b-49a5-8f14-34bf89bc20ca',
           category: res.raw[0].id,
+        },
+        {
+          title: `Whatever?!`,
+          text: `All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it? Your eyes can deceive you. 
+          Don't trust them. I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
+          All right. Well, take care of yourself, Han. I guess that's what you're best at, ain't it?`,
+          imageUrl: 'https://i.ibb.co/pwZsCWx/stock2.jpg',
+          userId: '2bac1170-827d-49ad-b7a3-9c76e6ad83e9',
+          category: res.raw[2].id,
         },
       ])
       .execute();
