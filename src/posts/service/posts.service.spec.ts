@@ -118,6 +118,7 @@ describe('PostsService', () => {
       title: 'title',
       text: 'Lorem ipsum',
       category: 1,
+      userId: '8055d923-0cfd-40e9-879e-638e8ffc7475',
       imageUrl: 'imageUrl.com/id',
     };
 

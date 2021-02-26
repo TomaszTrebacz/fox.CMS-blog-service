@@ -7,7 +7,6 @@ import { EditCategoryResolver } from './editCategory.resolver';
 
 describe('editCategoryResolver', () => {
   let resolver: EditCategoryResolver;
-  let service: CategoriesService;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
@@ -19,7 +18,6 @@ describe('editCategoryResolver', () => {
     }).compile();
 
     resolver = module.get<EditCategoryResolver>(EditCategoryResolver);
-    service = module.get<CategoriesService>(CategoriesService);
   });
 
   it('should be defined', () => {

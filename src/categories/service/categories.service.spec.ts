@@ -3,8 +3,6 @@ import { getRepositoryToken } from '@nestjs/typeorm';
 import { CategoryEntity } from '../../database/entities/category.entity';
 import { Connection, DeleteResult, Repository, UpdateResult } from 'typeorm';
 import { CategoriesService } from './categories.service';
-import { CategoryI } from 'src/models/category.interface';
-import { categoryExist } from 'src/validators';
 
 type MockRepository<T = any> = Partial<Record<keyof Repository<T>, jest.Mock>>;
 const createMockRepository = <T = any>(): MockRepository<T> => ({

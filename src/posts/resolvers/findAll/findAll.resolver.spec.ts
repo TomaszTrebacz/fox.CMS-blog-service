@@ -25,7 +25,7 @@ describe('FindAllResolver', () => {
   });
 
   it('should return the posts array', async () => {
-    let res = await resolver.findAll();
+    const res = await resolver.findAll();
 
     expect(res).toEqual(
       expect.arrayContaining([

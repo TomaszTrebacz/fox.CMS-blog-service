@@ -29,7 +29,10 @@ export class PostsService {
   }
 
   async findUserPosts(id: string): Promise<PostI[]> {
-    const res = await this.postsRepository.find({ userId: id });
+    const res = await this.postsRepository.find({
+      relations: ['category'],
+      where: { userId: id },
+    });
 
     await isArrayFound(res);
 
@@ -37,7 +40,10 @@ export class PostsService {
   }
 
   async createPost(
-    createData: Pick<PostI, 'title' | 'text' | 'category' | 'imageUrl'>,
+    createData: Pick<
+      PostI,
+      'title' | 'text' | 'category' | 'userId' | 'imageUrl'
+    >,
   ): Promise<PostI> {
     const post = await this.postsRepository.save(createData);
 

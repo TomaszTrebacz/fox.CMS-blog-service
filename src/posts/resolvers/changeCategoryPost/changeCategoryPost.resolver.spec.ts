@@ -7,7 +7,6 @@ import { ChangeCategoryPostResolver } from './changeCategoryPost.resolver';
 
 describe('changeCategoryPostResolver', () => {
   let resolver: ChangeCategoryPostResolver;
-  let service: PostsService;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
@@ -21,7 +20,6 @@ describe('changeCategoryPostResolver', () => {
     resolver = module.get<ChangeCategoryPostResolver>(
       ChangeCategoryPostResolver,
     );
-    service = module.get<PostsService>(PostsService);
   });
 
   it('should be defined', () => {

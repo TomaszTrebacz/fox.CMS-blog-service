@@ -1,4 +1,4 @@
-import { Resolver, Query, Args, ResolveField, Parent } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 import { PostI } from '../../../models/post.interface';
 import { PostsService } from '../../../posts/service/posts.service';
 

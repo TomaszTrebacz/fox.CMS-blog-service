@@ -1,6 +1,5 @@
 import { Test } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { EditCategoryInput } from 'src/graphql';
 import { CategoriesService } from '../../../categories/service/categories.service';
 import { CategoryEntity } from '../../../database/entities/category.entity';
 import { FindAllCategoriesResolver } from './findAllCategories.resolver';
@@ -25,7 +24,7 @@ describe('findAllCategoriesResolver', () => {
   });
 
   it('should return the catogories array', async () => {
-    let res = await resolver.findAll();
+    const res = await resolver.findAll();
 
     expect(res).toEqual(
       expect.arrayContaining([

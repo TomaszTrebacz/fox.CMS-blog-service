@@ -26,7 +26,7 @@ describe('FindOneResolver', () => {
 
   describe('if post exists', () => {
     it('should return the post', async () => {
-      let res = await resolver.findOne(1);
+      const res = await resolver.findOne(1);
 
       expect(res).toEqual(
         expect.objectContaining({

@@ -24,8 +24,8 @@ describe('EditPostResolver', () => {
   });
 
   const data = {
-    id: 35,
-    title: 'What?!',
+    id: 4,
+    title: 'What else?!',
     text: 'Another text',
   };
 

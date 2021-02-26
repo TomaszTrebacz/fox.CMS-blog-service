@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { CategoryEntity } from '../../database/entities/category.entity';
 import { CategoryI } from '../../models/category.interface';
-import { isExecuted, isArrayFound, isFound } from '../../utils';
+import { isExecuted, isFound } from '../../utils';
 
 @Injectable()
 export class CategoriesService {
@@ -13,7 +13,7 @@ export class CategoriesService {
   ) {}
 
   async findAll(): Promise<CategoryI[]> {
-    const res = await this.categoriesRepository.find();
+    const res = await this.categoriesRepository.find({ relations: ['posts'] });
 
     return res;
   }

@@ -27,7 +27,7 @@ describe('FindUserPostsResolver', () => {
   describe('if user and posts exist', () => {
     it('should return the posts array', async () => {
       const id = '8055d923-0cfd-40e9-879e-638e8ffc7475';
-      let res = await resolver.findUserPosts(id);
+      const res = await resolver.findUserPosts(id);
 
       expect(res).toEqual(
         expect.arrayContaining([
