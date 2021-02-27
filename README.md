@@ -67,5 +67,5 @@ npm run test
 The result:
 
 <p align="center">
-<img src="https://i.ibb.co/hdjzdQ7/test.png" alt="Tests" />
+<img src="https://i.ibb.co/wsR84gn/test.png" alt="Tests" />
 </p>
