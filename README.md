@@ -6,8 +6,7 @@
 
 ## Description
 
-Blog-service is responsible for all CRUD operations related to posts and categories.  
-In this repository are also placed all unit & integration tests.
+Blog-service is responsible for all CRUD operations related to posts and categories.
 
 ## Installation
 
